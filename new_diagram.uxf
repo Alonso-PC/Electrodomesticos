@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>65</x>
+      <y>190</y>
+      <w>295</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>cl.electrodomesticos::Electrodomestico
+--
+#COLOR = "Blanco": String
+#CONSUMO_ENERGETICO = 'F': char
+#PRECIO_BASE = 100: int
+#PESO = 5: double
++precioBase: int
+#color: String
+#consumoEnergetico: char
+#peso: double
+--
++Electrodomestico(): ctor
++Electrodomestico(int precioBase, double peso): ctor
++Electrodomestico(String color, char consumoEnergetico, int precioBase, double peso): ctor
++comprobarConsumoEnergetico(char consumo): boolean
++comprobarColor(String color): boolean
++precioFinal(int consumo, int tamano): int
++getPrecioBase(): int
++setPrecioBase(int precioBase): void
++getColor(): String
++getConsumoEnergetico(): char
++getPeso(): double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>135</y>
+      <w>425</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>cl.electrodomesticos::Television
+--
+-RESOLUCION = 20: int
+-SINTONIZADOR = false: boolean
+-PRECIOTV: int
+-resolucion: int
+-sintonizador: boolean
++precioTV: int
+--
++Television(): ctor
++Television(int precioBase, double peso): ctor
++Television(String color, char consumoEnergetico, int precioBase, double peso, int resolucion, boolean sintonizador, int precioTV): ctor
++precioFinal(int resolucion, boolean sintonizador, int precioBase): int
++getResolucion(): int
++setResolucion(int resolucion): void
++isSintonizador(): boolean
++setSintonizador(boolean sintonizador): void
++getPrecioTV(): int
++setPrecioTV(int precioTV): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>320</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>cl.electrodomesticos::Lavadora
+--
+-CARGA = 5: int
+-PRECIO_LAVADORA: int
+-carga: int
++precioLavadora: int
+--
++Lavadora(): ctor
++Lavadora(int precioBase, double peso): ctor
++Lavadora(int precioBase, double peso, char consumoEnergetico, String color, int carga, int precioLavadora): ctor
++precioFinal(int carga, int precioBase): int
++getPrecioLavadora(): int
++setPrecioLavadora(int precioLavadora): void
++getCarga(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>355</x>
+      <y>190</y>
+      <w>60</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;270.0;60.0;270.0;40.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>355</x>
+      <y>135</y>
+      <w>60</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;50.0;20.0;40.0;110.0;10.0;120.0</additional_attributes>
+  </element>
+</diagram>
